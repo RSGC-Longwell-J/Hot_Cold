@@ -39,43 +39,43 @@ void draw() {
   text(""+X, 475, 300);
 
 
-  if (keyPressed) {
-    if (key == 'h') {
-      if (!Higher) {
-        Higher=true;
-        X=int(random(X, 100));
-        background(255);
-        text("Is Your Number", 400, 200);
-        text(""+X, 475, 300);
-        Higher=false;
-      }
-    }
-  }
 
-  if (keyPressed) {
-    if (key == 'c') {
-      if (!Colder) {
-        Colder=true;
-        X=int(random(0, X));
-        background(255);
-        text("Is Your Number", 400, 200);
-        text(""+X, 475, 300);
-        Colder=false;
-      }
-    }
-  }
 }
 
 void mousePressed() {
 
-  if (mouseX < 150 && mouseX > 450 && mouseY < 500 && mouseY > 700) {
-    if (!Colder) {
-      Colder=true;
-      X=int(random(0, X));
-      background(255);
-      text("Is Your Number", 400, 200);
-      text(""+X, 475, 300);
-      Colder=false;
-    }
+  if (mouseX < 150 && mouseX > 450 && mouseY < 500 && mouseY > 750) {
+    Colder=true;
+    X=int(random(0, X));
+    background(255);
+    fill(0);
+    text("Is Your Number", 400, 200);
+    text(""+X, 475, 300);
+    fill(0, 0, 255);
+    rect(150, 500, 300, 200);
+
+    fill(118, 163, 255);
+    text("COLDER", 220, 625);
+
+    fill(255, 0, 0);
+    rect(575, 500, 300, 200);
+
+    fill(255, 130, 118);
+    text("HOTTER", 660, 625);
+    Colder=false;
   }
+
+  if (mouseX < 150 && mouseX > 450 && mouseY < 500 && mouseY > 750) {
+    if (!Higher) {
+    Higher=true;
+    X=int(random(X, 100));
+    background(255);
+    text("Is Your Number", 400, 200);
+    text(""+X, 475, 300);
+    Higher=false;
+  }
+    
+  }
+  
+  
 }
