@@ -1,4 +1,5 @@
 int X;
+int Y;
 boolean Higher;
 boolean Colder;
 
@@ -15,22 +16,22 @@ void setup() {
   text("Is Your Number", 400, 200);
 
   X=int(random(0, 100));
+  Y=int(random(0, 100));
 
   Higher=false;
   Colder=false;
 
   fill(0, 0, 255);
   rect(150, 500, 300, 200);
-  
-  fill(118,163,255);
-  text("COLDER",220,625);
+
+  fill(118, 163, 255);
+  text("COLDER", 220, 625);
 
   fill(255, 0, 0);
   rect(575, 500, 300, 200);
-  
-  fill(255,130,118);
-  text("HOTTER",660,625);
-  
+
+  fill(255, 130, 118);
+  text("HOTTER", 660, 625);
 }
 
 void draw() {
@@ -61,6 +62,20 @@ void draw() {
         text(""+X, 475, 300);
         Colder=false;
       }
+    }
+  }
+}
+
+void mousePressed() {
+
+  if (mouseX < 150 && mouseX > 450 && mouseY < 500 && mouseY > 700) {
+    if (!Colder) {
+      Colder=true;
+      X=int(random(0, X));
+      background(255);
+      text("Is Your Number", 400, 200);
+      text(""+X, 475, 300);
+      Colder=false;
     }
   }
 }
