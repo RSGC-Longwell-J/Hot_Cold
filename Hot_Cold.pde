@@ -9,7 +9,7 @@ void setup() {
   background(255);
 
   //size of the canvas
-  size(1000, 1000);
+  size(1280, 1000);
 
   //color
   fill(0);
@@ -42,10 +42,26 @@ void setup() {
 
   fill(255, 130, 118);
   text("HOTTER", 660, 625);
+  
+  fill(150,150,150);
+  rect(950,500,300,200);
+  
+  fill(200,200,200);
+  text("Correct", 1030, 625);
+  
+  //Legend
+  fill(0);
+  text("How to play", 950 , 100);
+  
+  fill(250,0,0);
+  text("Hotter = Higer", 950 , 200);
+  
+  fill(0,0,250);
+  text("Colder = Lower", 950 , 300);
 }
 
 void draw() {
-
+  fill(0);
   text(""+G, 475, 300);
 }
 
@@ -69,6 +85,16 @@ void mousePressed() {
 
   fill(255, 130, 118);
   text("HOTTER", 660, 625);
+  
+   //Legend
+  fill(0);
+  text("How to play", 950 , 100);
+  
+  fill(250,0,0);
+  text("Hotter = Higer", 950 , 200);
+  
+  fill(0,0,250);
+  text("Colder = Lower", 950 , 300);
 }
 
 //Hotter
@@ -92,5 +118,15 @@ G=(LL+UL)/2;
 
   fill(255, 130, 118);
   text("HOTTER", 660, 625);
+  
+   //Legend
+  fill(0);
+  text("How to play", 950 , 100);
+  
+  fill(250,0,0);
+  text("Hotter = Higer", 950 , 200);
+  
+  fill(0,0,250);
+  text("Colder = Lower", 950 , 300);
 }
 }
