@@ -157,10 +157,10 @@ void mousePressed() {
   if (mouseX > 950 && mouseX < 1250 && mouseY > 500 && mouseY < 700) {
     background(255);
     textSize(40);
-    text("Game Over", 550, 400);
     image(happy,0,0,width*1,height*1);
     image(chad1, 850, 300, width/4, height/4);
     image(chad2, 250, 300);
+    text("Game Over", 550, 400);
     noLoop();
   }
 }
