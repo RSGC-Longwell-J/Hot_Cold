@@ -70,19 +70,23 @@ void setup() {
 }
 
 void draw() {
+  
+  //Show the answer onscreen
   fill(255, 0, 213);
   text(""+G, 475, 300);
   noStroke();
+  
 }
 
 void mousePressed() {
-  //Colder
+  
+  //What the program does if you press colder
   if (mouseX > 150 && mouseX < 450 && mouseY > 500 && mouseY < 700) {
     UL=G;
     G=(LL+UL)/2;
     background(chill);
 
-    //text
+    //drawing the rectangles and their insides
     fill(255, 0, 213);
     text("Is Your Number", 350, 200);
 
@@ -115,13 +119,13 @@ void mousePressed() {
     text("Colder = Lower", 950, 300);
   }
 
-  //Hotter
+  //What the program does if you press hotter
   if (mouseX > 575 && mouseX < 875 && mouseY > 500 && mouseY < 700) {
     LL=G;
     G=(LL+UL)/2;
     background(flame);
 
-    //text
+    //drawing the rectangles and their insides
     fill(255, 0, 213);
     text("Is Your Number", 350, 200);
 
@@ -153,11 +157,11 @@ void mousePressed() {
     fill(0, 0, 250);
     text("Colder = Lower", 950, 300);
   }
-
+  //what the program does if you press correct
   if (mouseX > 950 && mouseX < 1250 && mouseY > 500 && mouseY < 700) {
     background(255);
     textSize(40);
-    image(happy,0,0,width*1,height*1);
+    image(happy, 0, 0, width*1, height*1);
     image(chad1, 850, 300, width/4, height/4);
     image(chad2, 250, 300);
     text("Game Over", 550, 400);
